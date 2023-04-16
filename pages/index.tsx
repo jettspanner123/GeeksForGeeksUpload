@@ -226,12 +226,9 @@ const Home: NextPage = () => {
               <div className="w-[10rem] flex items-center h-[5rem] justify-center bg-white absolute top-[6rem] login_button rounded-xl gap-0 right-[10rem]">
                 <div
                   onClick={() => setLoginMenu(!loginMenu)}
-                  className="bg-white p-2 px-4 hover:cursor-pointer font-bold h-full text-xl flex justify-center items-center hover:bg-black hover:text-white"
+                  className="bg-white p-2 px-4 hover:cursor-pointer font-bold w-full delay-500 h-full text-xl flex justify-center items-center hover:bg-black hover:text-white"
                 >
                   Login
-                </div>
-                <div className="bg-white p-2 px-4 font-bold text-xl hover:cursor-pointer h-full hover:bg-black hover:text-white flex justify-center items-center">
-                  Signup
                 </div>
               </div>
 
@@ -284,13 +281,14 @@ const Home: NextPage = () => {
                       />
                     </div>
                     <h1 className="text-[4rem] font-bold text-black pr-5 ">
-                      Leah goti.
+                      One - Stop agrotech solution for farming challenge
                     </h1>
                   </div>
                   <div className="flex justify-between p-6 items-center gap-0 px-[15rem]">
                     <h1 className="text-[4rem] font-bold text-black pl-6 ">
-                      Lawda Lahsun.
+                      Effortless access to bank loans & Government schemes
                     </h1>
+                    <div></div>
                     <div className=" w-[40%] ml-6 h-[15rem] rounded-xl overflow-hidden border-[5px] border-black ">
                       <Image
                         src="https://github.com/jettspanner123/GeeksForGeeksUpload/blob/main/pages/Image%20Two.jpg?raw=true"
