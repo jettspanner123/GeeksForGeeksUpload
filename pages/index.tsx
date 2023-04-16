@@ -228,13 +228,13 @@ const Home: NextPage = () => {
                       className="w-[80%] bg-green-400 mx-auto mt-5 h-[90%] rounded-xl overflow-hidden"
                       // ref={myRef}
                     >
-                      <Image
+                      {/* <Image
                         src="../pages/Picsart_23-04-15_20-38-58-361.png"
                         objectFit="cover"
                         width={300}
                         height={150}
                         alt=""
-                      />
+                      /> */}
                     </div>
                   </div>
                   <div className="h-[65%]  flex justify-around">
