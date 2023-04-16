@@ -280,16 +280,16 @@ const Home: NextPage = () => {
                         width={600}
                       />
                     </div>
-                    <h1 className="text-[4rem] font-bold text-black pr-5 ">
+                    <h1 className="text-[2rem] font-bold text-black pr-5 ">
                       One - Stop agrotech solution for farming challenge
                     </h1>
                   </div>
                   <div className="flex justify-between p-6 items-center gap-0 px-[15rem]">
-                    <h1 className="text-[4rem] font-bold text-black pl-6 ">
+                    <h1 className="text-[2rem] font-bold text-black pl-6 ">
                       Effortless access to bank loans & Government schemes
                     </h1>
                     <div></div>
-                    <div className=" w-[40%] ml-6 h-[15rem] rounded-xl overflow-hidden border-[5px] border-black ">
+                    <div className=" w-[50%] ml-6 h-[15rem] rounded-xl overflow-hidden border-[5px] border-black ">
                       <Image
                         src="https://github.com/jettspanner123/GeeksForGeeksUpload/blob/main/pages/Image%20Two.jpg?raw=true"
                         alt=""
