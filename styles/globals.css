@@ -9,7 +9,11 @@
     padding: 0;
     margin: 0;
     overflow: hidden;
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+    color: #fefcf3;
 }
 
 div {
@@ -22,27 +26,49 @@ li {
     padding-block: 1rem;
     transition: all 300ms;
     font-weight: 600;
-    color: white
+    color: white;
+    transition: all 500ms;
+}
+
+.list_animation {
+    box-shadow: inset 0 0 0 0 white;
+}
+
+.list_animation:hover {
+    box-shadow: inset 400px 0px 0 0 #fefcf3;
+    color: black;
 }
 
 .list_item {
     display: flex;
     justify-content: center;
+    transition: all 250ms;
     align-items: center;
     gap: 10px;
 }
 
 .list_item:hover {
-    background-color: white;
+    background-color: #fefcf3;
     color: black;
+}
+
+li {
+    transition: text-align 250ms;
 }
 
 li:hover {
     cursor: pointer;
+    text-align: center;
 }
 
-.arrow_list>.arrow {
-    transform: rotate(180deg);
+.something {
+    width: 100%;
+    border: 1px solid black;
+}
+
+.something:hover {
+    background-color: #1a1a1a;
+    color: white;
 }
 
 .background_body {
@@ -61,6 +87,14 @@ li:hover {
     background-image: linear-gradient( to right top, #000000, #0e0d0e, #171717, #1e1e1f, #262627);
     transition: all 1s;
     transition-duration: 1s;
+    /* box-shadow: 0px 0px 20px 5px black; */
+    box-shadow: 0 0 50px 15px #e384ff;
+    border: 0.5px solid white;
+}
+
+.creative_div:hover {
+    border: 0;
+    box-shadow: none;
 }
 
 .creative_div:hover>.hero_heading {
@@ -73,11 +107,22 @@ li:hover {
     opacity: 0;
 }
 
+ul {
+    transition: all 1s;
+}
+
+.special_case {
+    background: linear-gradient( to right top, #7106c4, #8906d3, #a106e2, #b904f1, #d200ff);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .creative_div:hover>.second_div {
     display: block;
     opacity: 1;
     height: 50rem;
-    overflow: auto;
+    overflow: none;
 }
 
 @keyframes bg-animation {

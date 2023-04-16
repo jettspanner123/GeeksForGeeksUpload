@@ -1,6 +1,10 @@
 import type { NextPage } from "next";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import Image from "next/image";
+import Card from "../components/Card";
+import { FaMoneyBillAlt, FaLeaf, FaHandHoldingWater } from "react-icons/fa";
+import {} from "react";
 import { BiDownArrowAlt } from "react-icons/bi";
 const Home: NextPage = () => {
   const [active, setActive] = useState(0);
@@ -10,6 +14,8 @@ const Home: NextPage = () => {
   const [isShowingForu, setIsShowingFour] = useState(false);
   const [isShowingFive, setIsShowingFive] = useState(false);
   const [isShowingSix, setIsShowingSix] = useState(false);
+  const myRef = useRef();
+
   function handleClick(number: number) {
     setActive(number);
   }
@@ -20,7 +26,6 @@ const Home: NextPage = () => {
     setIsShowingThree(false);
     setIsShowingFour(false);
     setIsShowingFive(false);
-
   }
   function handleSecond() {
     setIsShowingOne(false);
@@ -66,65 +71,97 @@ const Home: NextPage = () => {
         transition={{ duration: 1 }}
         className="  hover:bg-gray-900 shadow-2xl  creative_div overflow-hidden hover:overflow-auto px-10  mt-[17rem] backdrop:blur-[100px] rounded-[1rem] w-[40rem] hover:w-[100vw] hover:h-[100vh] hover:mt-0 hover:rounded-none transition-all duration-[1s] h-[25rem] flex  flex-col justify-center items-center "
       >
-        <h1 className="font-bold text-[4rem]  text-white hero_heading transition-all duration-[1s]">
-          Agrotech
+        <h1 className="font-bold flex text-[4rem]  text-white hero_heading transition-all duration-[1s]">
+          FARM{<p className="special_case">EASE</p>}
         </h1>
         <motion.div className="w-[90%] z-[1000]  mx-auto border-2  border-white rounded-xl my-10 overflow-hidden second_div transition-all duration-[1s]">
           <div className="flex overflow-hidden">
             <div className="text-white border-r-2 border-white  transition-delay: 300ms; w-[15%] h-[79vh]">
-              <ul className="text-xl mt-[7rem]">
+              <ul className="text-xl mt-[7rem] ">
                 <li
                   id="home"
-                  className={active == 0 ? "bg-white text-black" : "bg-black"}
+                  className={
+                    active == 0
+                      ? "bg-[#FEFCF3] text-black"
+                      : "bg-transparent list_animation"
+                  }
                   onClick={() => handleClick(0)}
                 >
                   HOME
                 </li>
                 <li
                   id="about"
-                  className={active == 1 ? "bg-white text-black" : "bg-black"}
+                  className={
+                    active == 1
+                      ? "bg-[#FEFCF3] text-black"
+                      : "bg-transparent list_animation"
+                  }
                   onClick={() => handleClick(1)}
                 >
                   ABOUT
                 </li>
                 <li
                   id="contacts"
-                  className={active == 2 ? "bg-white text-black" : "bg-black"}
+                  className={
+                    active == 2
+                      ? "bg-[#FEFCF3] text-black"
+                      : "bg-transparent list_animation"
+                  }
                   onClick={() => handleClick(2)}
                 >
                   CONTACT US
                 </li>
                 <li
                   id="contacts"
-                  className={active == 3 ? "bg-white text-black" : "bg-black"}
+                  className={
+                    active == 3
+                      ? "bg-[#FEFCF3] text-black"
+                      : "bg-transparent list_animation"
+                  }
                   onClick={() => handleClick(3)}
                 >
                   DISCUSSION GROUP
                 </li>
                 <li
                   id="contacts"
-                  className={active == 4 ? "bg-white text-black" : "bg-black"}
+                  className={
+                    active == 4
+                      ? "bg-[#FEFCF3] text-black"
+                      : "bg-transparent list_animation"
+                  }
                   onClick={() => handleClick(4)}
                 >
                   COMPLAINTS
                 </li>
                 <li
                   id="contacts"
-                  className={active == 5 ? "bg-white text-black" : "bg-black"}
+                  className={
+                    active == 5
+                      ? "bg-[#FEFCF3] text-black"
+                      : "bg-transparent list_animation"
+                  }
                   onClick={() => handleClick(5)}
                 >
                   DIGITAL ADVERTISING
                 </li>
                 <li
                   id="contacts"
-                  className={active == 6 ? "bg-white text-black" : "bg-black"}
+                  className={
+                    active == 6
+                      ? "bg-[#FEFCF3] text-black"
+                      : "bg-transparent list_animation"
+                  }
                   onClick={() => handleClick(6)}
                 >
                   SELF HELP GROUP
                 </li>
                 <li
                   id="contacts"
-                  className={active == 7 ? "bg-white text-black" : "bg-black"}
+                  className={
+                    active == 7
+                      ? "bg-[#FEFCF3] text-black"
+                      : "bg-transparent list_animation"
+                  }
                   onClick={() => handleClick(7)}
                 >
                   NGO'S LISTS
@@ -132,42 +169,51 @@ const Home: NextPage = () => {
               </ul>
             </div>
             <div className=" w-[85%] transition-delay: 300ms;">
-              <div className="w-full border-b-2 border-white flex justify-end">
+              <div className="w-full border-b-2 border-white flex justify-end ">
                 <ul className="flex arrow_list">
                   <motion.li
                     className="list_item first_list"
-                    onClick={handleFirst}
+                    onMouseOver={handleFirst}
+                    onMouseLeave={handleFirst}
                   >
                     Easy Loan
                     <BiDownArrowAlt size={20} className="arrow" />
                   </motion.li>
-                  <li onClick={handleSecond} className="list_item second_thing">
+                  <li
+                    onMouseOver={handleSecond}
+                    onMouseLeave={handleSecond}
+                    className="list_item second_thing"
+                  >
                     Farming Techniques
                     <BiDownArrowAlt size={20} className="arrow" />
                   </li>
                   <li
-                    onClick={handleThird}
+                    onMouseOver={handleThird}
+                    onMouseLeave={handleThird}
                     className="list_item third_thing first_list"
                   >
                     Water Saving
                     <BiDownArrowAlt size={20} className="arrow" />
                   </li>
                   <li
-                    onClick={handleFourth}
+                    onMouseOver={handleFourth}
+                    onMouseLeave={handleFourth}
                     className="list_item fourth_thing first_list"
                   >
                     Government Schemes
                     <BiDownArrowAlt size={20} className="arrow" />
                   </li>
                   <li
-                    onClick={handleFifth}
+                    onMouseOver={handleFifth}
+                    onMouseLeave={handleFifth}
                     className="list_item fifth_thing first_list"
                   >
                     Price of Crops
                     <BiDownArrowAlt size={20} className="arrow" />
                   </li>
                   <li
-                    onClick={handleSix}
+                    onMouseOver={handleSix}
+                    onMouseLeave={handleSix}
                     className="list_item sixth_thing first_list"
                   >
                     Transport
@@ -175,65 +221,185 @@ const Home: NextPage = () => {
                   </li>
                 </ul>
               </div>
-              <div className="w-full h-full "></div>
+              {active == 0 ? (
+                <div className="w-full h-full bg-[#FEFCF3] text-black">
+                  <div className="h-[35%] flext justify-center items-center ">
+                    <div
+                      className="w-[80%] bg-green-400 mx-auto mt-5 h-[90%] rounded-xl overflow-hidden"
+                      // ref={myRef}
+                    >
+                      <Image
+                        src="../pages/Picsart_23-04-15_20-38-58-361.png"
+                        objectFit="cover"
+                        width={300}
+                        height={150}
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div className="h-[65%]  flex justify-around">
+                    <div>
+                      <div className="bg-[#1a1a1a] text-white rounded-t-xl ">
+                        <FaMoneyBillAlt size={80} className="mx-6 my-2 " />
+                      </div>
+                      <Card
+                        heading="Easy Lones to Farmers."
+                        paragraph="On our website, we provide helpful guidance for farmers looking to obtain quick loans. We walk you through the procedure and assist you in obtaining the funding required to expand your agricultural enterprise."
+                      />
+                    </div>
+                    <div>
+                      <div className="bg-[#1a1a1a] text-white rounded-t-xl ">
+                        <FaLeaf size={80} className="mx-6 my-2 py-2" />
+                      </div>
+                      <Card
+                        heading="Modern Farming Techniques."
+                        paragraph="Our site provides expert guidance on accessing modern farming techniques, helping farmers stay up-to-date with the latest innovations and practices."
+                      />
+                    </div>
+                    <div>
+                      <div className="bg-[#1a1a1a] text-white rounded-t-xl ">
+                        <FaHandHoldingWater size={80} className="mx-6 my-2" />
+                      </div>
+                      <Card
+                        heading="Water Saving. 
+                      
+                      "
+                        paragraph="Our website provides useful guidance on how farmers can access water-saving methods, preserving this priceless resource and boosting agricultural productivity."
+                      />
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                // dafdfadhfadsjhfashfdkhfdhfohdsofhsodifhsohdf
+                <div></div>
+              )}
             </div>
           </div>
         </motion.div>
         <div
+          onMouseOver={handleFirst}
+          onMouseLeave={handleFirst}
           className={
             isShowingOne == false
-              ? " absolute top-[17rem] left-[31rem] bg-white h-[0rem] w-[30rem] rounded-xl transition-all duration-300"
-              : " absolute top-[17rem] left-[31rem] bg-white h-[25rem] w-[30rem] rounded-xl  transition-all duration-300"
+              ? " absolute top-[17rem] delay-500 left-[31rem] bg-white flex items-center z-[1000]  h-[0rem] w-[16rem] rounded-xl transition-all duration-300"
+              : " absolute top-[17rem]  left-[31rem] bg-white  border-2 border-black flex items-center shadow-2xl h-[16rem] w-[16rem] rounded-xl z-[1000]  transition-all duration-300 "
           }
         >
-          This is sixth
+          <ul className="text-black text-xl w-full  ">
+            <li className="text-black text-left font-bold something py-5">
+              <a target="_black" href="">
+                NABARD.
+              </a>
+            </li>
+            <li className="text-black text-left font-bold something">
+              <a target="_black" href="">
+                Online Schemes.
+              </a>
+            </li>
+            <li className="text-black text-left font-bold something">
+              <a target="_black" href="">
+                Low Interest.
+              </a>
+            </li>
+            <li className="text-black text-left font-bold something">
+              <a target="_black" href="">
+                R&d.
+              </a>
+            </li>
+          </ul>
         </div>
         <div
+          onMouseOver={handleSecond}
+          onMouseLeave={handleSecond}
           className={
             isShowingTwo == false
-              ? " absolute top-[17rem] left-[42rem] bg-white h-[0rem] w-[30rem] rounded-xl transition-all duration-300"
-              : " absolute top-[17rem] left-[42rem] bg-white h-[25rem] w-[30rem] rounded-xl  transition-all duration-300"
+              ? " absolute top-[17rem] left-[44rem] bg-white delay-500  h-[0rem] flex items-center w-[16rem] z-[1000] rounded-xl transition-all duration-300"
+              : " absolute top-[17rem] left-[44rem] bg-white flex items-center h-[8rem] w-[16rem] z-[1000] border-2 border-black rounded-xl  transition-all duration-300"
           }
         >
-          This is first
+          <ul className="text-black text-xl  w-full">
+            <li className="text-black text-left font-bold   something">
+              <a target="_black" href="">
+                NABARD.
+              </a>
+            </li>
+            <li className="text-black text-left font-bold   something">
+              <a target="_black" href="">
+                Online Schemes.
+              </a>
+            </li>
+          </ul>
         </div>
         <div
+          onMouseOver={handleThird}
+          onMouseLeave={handleThird}
           className={
             isShowingThree == false
-              ? " absolute top-[17rem] left-[58rem] bg-white h-[0rem] w-[30rem] rounded-xl transition-all duration-300"
-              : " absolute top-[17rem] left-[58rem] bg-white h-[25rem] w-[30rem] rounded-xl  transition-all duration-300"
+              ? " absolute top-[17rem] left-[58rem] delay-500  bg-white h-[0rem] z-[1000] w-[16rem]  rounded-xl transition-all duration-300 flex justify-center items-center"
+              : " absolute top-[17rem] left-[58rem] bg-white h-[21rem] z-[1000] border-2 border-black w-[16rem] flex justify-center items-center rounded-xl  transition-all duration-300"
           }
         >
-          This is second
+          <ul className="text-black text-xl  w-full">
+            <li className="text-black text-left font-bold something">
+              <a target="_black" href="">
+                Drip Irigation.
+              </a>
+            </li>
+            <li className="text-black text-left font-bold something">
+              <a target="_black" href="">
+                Mulching.
+              </a>
+            </li>
+            <li className="text-black text-left font-bold something">
+              <a target="_black" href="">
+                Crop Rotation.
+              </a>
+            </li>
+            <li className="text-black text-left font-bold something">
+              <a target="_black" href="">
+                Rainwater Harvesting.
+              </a>
+            </li>
+            <li className="text-black text-left font-bold something">
+              <a target="_black" href="">
+                Crop Selection.
+              </a>
+            </li>
+          </ul>
         </div>
         <div
+          onMouseOver={handleFourth}
+          onMouseLeave={handleFourth}
           className={
             isShowingForu == false
-              ? " absolute top-[17rem] left-[71rem] bg-white h-[0rem] w-[30rem] rounded-xl transition-all duration-300"
-              : " absolute top-[17rem] left-[71rem] bg-white h-[25rem] w-[30rem] rounded-xl  transition-all duration-300"
+              ? " absolute top-[17rem] delay-500 left-[71rem]  bg-white z-[1000] h-[0rem] w-[30rem] rounded-xl transition-all duration-300"
+              : " absolute top-[17rem] left-[71rem] bg-white z-[1000] border-2 border-black h-[25rem] w-[30rem] rounded-xl  transition-all duration-300"
           }
         >
           This is third
         </div>
         <div
+          onMouseOver={handleFifth}
+          onMouseLeave={handleFifth}
           className={
             isShowingFive == false
-              ? " absolute top-[17rem] left-[79.5rem] bg-white h-[0rem] w-[30rem] rounded-xl transition-all duration-300"
-              : " absolute top-[17rem] left-[79.5rem] bg-white h-[25rem] w-[30rem] rounded-xl  transition-all duration-300"
+              ? " absolute top-[17rem] delay-500 left-[79.5rem] bg-white z-[1000] h-[0rem] w-[30rem] rounded-xl transition-all duration-300"
+              : " absolute top-[17rem] left-[79.5rem] bg-white z-[1000] h-[25rem] border-2 border-black w-[30rem] rounded-xl  transition-all duration-300"
           }
         >
           This is fourth
         </div>
         <div
+          onMouseOver={handleSix}
+          onMouseLeave={handleSix}
           className={
             isShowingSix == false
-              ? " absolute top-[17rem] right-[10rem]  bg-white h-[0rem] w-[30rem] rounded-xl transition-all duration-300"
-              : " absolute top-[17rem] right-[10rem] bg-white h-[25rem] w-[30rem] rounded-xl  transition-all duration-300"
+              ? " absolute top-[17rem] delay-500 right-[10rem]  bg-white z-[1000] h-[0rem] w-[30rem] rounded-xl transition-all duration-300"
+              : " absolute top-[17rem] right-[10rem] bg-white border-2 border-black z-[1000] h-[25rem] w-[30rem] rounded-xl  transition-all duration-300"
           }
         >
           This is fifth
         </div>
-        
       </motion.div>
     </div>
   );
