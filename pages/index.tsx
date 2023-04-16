@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { motion } from "framer-motion";
-import { useState, useRef } from "react";
+import { useState, useRef, AbstractView } from "react";
 import Image from "next/image";
 import Card from "../components/Card";
 import { FaMoneyBillAlt, FaLeaf, FaHandHoldingWater } from "react-icons/fa";
@@ -223,21 +223,7 @@ const Home: NextPage = () => {
               </div>
               {active == 0 ? (
                 <div className="w-full h-full bg-[#FEFCF3] text-black">
-                  <div className="h-[35%] flext justify-center items-center ">
-                    <div
-                      className="w-[80%] bg-green-400 mx-auto mt-5 h-[90%] rounded-xl overflow-hidden"
-                      // ref={myRef}
-                    >
-                      {/* <Image
-                        src="../pages/Picsart_23-04-15_20-38-58-361.png"
-                        objectFit="cover"
-                        width={300}
-                        height={150}
-                        alt=""
-                      /> */}
-                    </div>
-                  </div>
-                  <div className="h-[65%]  flex justify-around">
+                  <div className="h-[100%]  flex justify-around mt-10 px-10">
                     <div>
                       <div className="bg-[#1a1a1a] text-white rounded-t-xl ">
                         <FaMoneyBillAlt size={80} className="mx-6 my-2 " />
@@ -269,9 +255,58 @@ const Home: NextPage = () => {
                     </div>
                   </div>
                 </div>
-              ) : (
+              ) : active == 1 ? (
                 // dafdfadhfadsjhfashfdkhfdhfohdsofhsodifhsohdf
-                <div></div>
+                <div className="h-full w-full bg-[#FEFCF3] text-black">
+                  <div className="flex justify-between p-6 items-center gap-0 mt-10">
+                    <div className="bg-green-300 w-[40%] ml-6 h-[10rem] border-[5px] border-black rounded-xl overflow-hidden">
+                      1
+                    </div>
+                    <h1 className="text-[4rem] font-bold text-black pr-5 ">
+                      Leah goti.
+                    </h1>
+                  </div>
+                  <div className="flex justify-between p-6 items-center gap-0">
+                    <h1 className="text-[4rem] font-bold text-black pl-6 ">
+                      Lawda Lahsun.
+                    </h1>
+                    <div className="bg-green-300 w-[40%] ml-6 h-[10rem] rounded-xl overflow-hidden border-[5px] border-black">
+                      1
+                    </div>
+                  </div>
+                  <div className="flex justify-between p-6 items-center gap-0">
+                    <div className="bg-green-300 w-[40%] ml-6 h-[10rem] rounded-xl overflow-hidden border-[5px] border-black">
+                      1
+                    </div>
+                    <h1 className="text-[4rem] font-bold text-black pr-5 ">
+                      Johny Sins.
+                    </h1>
+                  </div>
+                </div>
+              ) : active == 2 ? (
+                <div className="h-full w-full bg-[#FEFCF3] text-black">
+                  This is 3
+                </div>
+              ) : active == 3 ? (
+                <div className="h-full w-full bg-[#FEFCF3] text-black">
+                  This is 4
+                </div>
+              ) : active == 4 ? (
+                <div className="h-full w-full bg-[#FEFCF3] text-black">
+                  This is 5
+                </div>
+              ) : active == 5 ? (
+                <div className="h-full w-full bg-[#FEFCF3] text-black">
+                  This is 6
+                </div>
+              ) : active == 6 ? (
+                <div className="h-full w-full bg-[#FEFCF3] text-black">
+                  This is 7
+                </div>
+              ) : (
+                <div className="h-full w-full bg-[#FEFCF3] text-black">
+                  This is 8
+                </div>
               )}
             </div>
           </div>
@@ -287,7 +322,7 @@ const Home: NextPage = () => {
         >
           <ul className="text-black text-xl w-full  ">
             <li className="text-black text-left font-bold something py-5">
-              <a target="_black" href="">
+              <a target="_black" href="https://google.com">
                 NABARD.
               </a>
             </li>
